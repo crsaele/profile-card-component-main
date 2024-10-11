@@ -1,0 +1,116 @@
+:root {
+  --darkCyan: hsl(185, 75%, 39%);
+  --veryDarkBlue: hsl(229, 23%, 23%);
+  --darkGrayishBlue: hsl(227, 10%, 46%);
+
+  --darkGrey: hsl(0, 0%, 59%);
+  --kumbhSans: "Kumbh Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--darkCyan);
+  background-image: url("/images/bg-pattern-top.svg"),
+    url("images/bg-pattern-bottom.svg");
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  background-repeat: no-repeat no-repeat;
+  min-height: 100vh;
+  font-family: var(--kumbhSans);
+  /* 18px base === 1.125rem */
+  font-size: 1.125rem;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+/* the p elements that descend after h2 */
+h2 ~ p {
+  color: var(--darkGrayishBlue);
+  margin-top: 5px;
+  font-size: 0.75em;
+  letter-spacing: 1px;
+}
+
+div h2 {
+  font-size: 1.1em;
+}
+span {
+  color: var(--darkGrayishBlue);
+}
+footer {
+  position: absolute;
+  bottom: 50px;
+}
+.card {
+  background-color: #fff;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.avatar-img {
+  border-radius: 50%;
+  position: relative;
+  bottom: 3.5em;
+  border: 6px solid white;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 25px 20px;
+}
+
+.card-info-container {
+  margin-top: -70px;
+  padding: 10px 25px;
+  border-bottom: 1px solid gainsboro;
+}
+
+.place {
+  font-size: 0.9em;
+}
+
+.profile-card-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.profile-card-stats span {
+  margin: 0 10px;
+  color: var(--darkGrayishBlue);
+}
+
+.attribution {
+  font-size: 0.9rem;
+  color: white;
+  text-align: center;
+}
+.attribution a {
+  color: cyan;
+  text-decoration: none;
+}
+
+@media (max-width: 430px) {
+  body {
+    background-position: right 15vw bottom 50vh, left 15vw top 50vh;
+  }
+  footer {
+    display: none;
+  }
+}
